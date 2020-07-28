@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.AddThePartController">
+   <children>
+      <Text fx:id="companyNameErrorText" fill="#f01d1d" layoutX="134.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Enter a Proper Name" visible="false" wrappingWidth="149.00000095367432" />
+      <Text fx:id="nameErrorText" fill="#f01d1d" layoutX="124.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Enter a Proper Name" visible="false" wrappingWidth="149.00000095367432" />
+      <Text fx:id="invErrorText" fill="#f01d1d" layoutX="134.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Enter a valid Number" visible="false" wrappingWidth="149.00000095367432" />
+      <Text fx:id="priceCostErrorText" fill="#f01d1d" layoutX="134.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Enter a valid Number" visible="false" wrappingWidth="149.00000095367432" />
+      <Text fx:id="minErrorText" fill="#f01d1d" layoutX="144.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Enter a valid Number" visible="false" wrappingWidth="149.00000095367432" />
+      <Text fx:id="machineErrorText111" fill="#f01d1d" layoutX="154.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Enter a valid Number" visible="false" wrappingWidth="149.00000095367432" />
+      <TextField fx:id="machineIdTextField" layoutX="105.0" layoutY="355.0" onAction="#machineIdTextField" promptText="Mach ID" />
+      <Text fx:id="machineIdText" layoutX="14.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Machine ID" wrappingWidth="96.13671875" />
+      <Text fill="#2147c6" layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Part">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <HBox layoutX="98.0" layoutY="25.0" spacing="10.0">
+         <children>
+            <RadioButton fx:id="InHouseBtn" mnemonicParsing="false" onAction="#InHouseBtn" selected="true" text="In-House">
+               <toggleGroup>
+                  <ToggleGroup fx:id="tg1" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="OutsourcedBtn" mnemonicParsing="false" onAction="#OutsourcedBtn" text="Outsourced" toggleGroup="$tg1" />
+         </children>
+      </HBox>
+      <VBox layoutX="14.0" layoutY="75.0" spacing="40.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inv" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price/Cost" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+            <Text fx:id="companyNameText" strokeType="OUTSIDE" strokeWidth="0.0" text="Company Name" visible="false" />
+         </children>
+      </VBox>
+      <VBox layoutX="105.0" layoutY="75.0" spacing="30.0">
+         <children>
+            <TextField fx:id="IdTextField" editable="false" onAction="#IdTextField" opacity="0.43" text="AutoGen - Disabled">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+            <TextField fx:id="NameTextField" onAction="#NameTextField" promptText="Part Name" />
+            <TextField fx:id="InvTextField" onAction="#InvTextField" promptText="Inv" />
+            <TextField fx:id="PriceCostTextField" onAction="#PriceCostTextField" promptText="Price/Cost" />
+         </children>
+      </VBox>
+      <TextField fx:id="MaxTextField" layoutX="105.0" layoutY="299.0" onAction="#MaxTextField" prefHeight="25.0" prefWidth="36.0" promptText="Max" />
+      <TextField fx:id="CompanyNameTextField" layoutX="105.0" layoutY="355.0" onAction="#CompanyNameTextField" promptText="Comp Nm" visible="false" />
+      <TextField fx:id="MinTextField" layoutX="212.0" layoutY="299.0" onAction="#MinTextField" prefHeight="25.0" prefWidth="36.0" promptText="Min" />
+      <Text layoutX="179.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+      <Button fx:id="saveBtn" layoutX="141.0" layoutY="419.0" mnemonicParsing="false" onAction="#saveBtn" text="Save" />
+      <Button fx:id="cancelBtn" layoutX="204.0" layoutY="419.0" mnemonicParsing="false" onAction="#cancelBtn" text="Cancel" />
+      <Text fx:id="minmaxErrorText" fill="#f01d1d" layoutX="144.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please put a Min value less than the Max Value." visible="false" wrappingWidth="149.00000095367432" />
+   </children>
+</AnchorPane>
